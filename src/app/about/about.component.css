@@ -1,0 +1,6 @@
+/* src/app/about/about.component.css */
+:host { display: block; max-width: 720px; margin: 2rem auto; font-family: system-ui, Arial, sans-serif; }
+h1 { margin: 0 0 0.25rem; }
+img { border-radius: 8px; display: block; margin: 0.5rem 0; }
+.btns button { margin-right: 0.5rem; }
+.highlight { outline: 2px solid orange; padding: 0.25rem 0.5rem; border-radius: 4px; }

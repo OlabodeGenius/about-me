@@ -1,0 +1,35 @@
+<!-- src/app/about/about.component.html -->
+
+<!-- Interpolation -->
+<h1>{{ title }}</h1>
+<p>{{ mission }}</p>
+
+<!-- Property binding -->
+<img [src]="photoUrl" [alt]="title" width="240" height="160">
+<p [class.highlight]="likes >= 5">Likes: {{ likes }}</p>
+<button [disabled]="isButtonDisabled" (click)="isButtonDisabled = true">
+  Disabled demo (click once)
+</button>
+
+<!-- Event binding -->
+<div class="btns">
+  <button type="button" (click)="like()">Like</button>
+  <button type="button" (click)="toggleMsg()">Toggle Message</button>
+</div>
+<p *ngIf="showMessage">Thank you for visiting!</p>
+
+<hr>
+
+<!-- Two-way binding -->
+<label>
+  Greeting:
+  <input [(ngModel)]="name" placeholder="Your name">
+</label>
+<p>Hello, {{ name || 'friend' }}</p>
+
+<label>
+  Email:
+  <input [(ngModel)]="email" placeholder="Leave your email">
+</label>
+<button type="button" (click)="subscribe()">Subscribe</button>
+<p *ngIf="subscribedMsg">{{ subscribedMsg }}</p>
